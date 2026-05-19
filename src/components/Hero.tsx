@@ -54,26 +54,26 @@ export function Hero() {
           <line x1="0" y1="920" x2="1920" y2="920" stroke="url(#geom-grad)" strokeWidth="1-5" className="opacity-15" />
 
           {/* Oblique architectural lines */}
-          <line x1="-200" y1="200" x2="2120" y2="860" stroke="url(#geom-grad)" strokeWidth="2.5" className="opacity-45" filter="url(#glow)" />
-          <line x1="-200" y1="500" x2="2120" y2="1160" stroke="url(#geom-grad)" strokeWidth="2.5" className="opacity-40" filter="url(#glow)" />
-          <line x1="384" y1="-100" x2="1536" y2="1180" stroke="url(#geom-grad)" strokeWidth="2" className="opacity-35" filter="url(#glow)" />
-          <line x1="1152" y1="-100" x2="2304" y2="1180" stroke="url(#geom-grad)" strokeWidth="2" className="opacity-35" filter="url(#glow)" />
+          <line x1="-200" y1="200" x2="2120" y2="860" stroke="url(#geom-grad)" strokeWidth="2.5" className="opacity-45 svg-glow" />
+          <line x1="-200" y1="500" x2="2120" y2="1160" stroke="url(#geom-grad)" strokeWidth="2.5" className="opacity-40 svg-glow" />
+          <line x1="384" y1="-100" x2="1536" y2="1180" stroke="url(#geom-grad)" strokeWidth="2" className="opacity-35 svg-glow" />
+          <line x1="1152" y1="-100" x2="2304" y2="1180" stroke="url(#geom-grad)" strokeWidth="2" className="opacity-35 svg-glow" />
 
           {/* Intersecting Diamond Wireframe Paths */}
-          <g className="animate-pulse-slow" filter="url(#glow)">
+          <g className="animate-pulse-slow svg-glow">
             <polygon points="400,100 600,300 400,500 200,300" fill="none" stroke="url(#geom-grad)" strokeWidth="2.5" className="opacity-35" />
             <line x1="200" y1="300" x2="600" y2="300" stroke="url(#geom-grad)" strokeWidth="1.5" className="opacity-20" />
             <line x1="400" y1="100" x2="400" y2="500" stroke="url(#geom-grad)" strokeWidth="1.5" className="opacity-20" />
           </g>
           
-          <g className="animate-pulse-slow" style={{ animationDelay: '2s' }} filter="url(#glow)">
+          <g className="animate-pulse-slow svg-glow" style={{ animationDelay: '2s' }}>
             <polygon points="960,550 1160,750 960,950 760,750" fill="none" stroke="url(#geom-grad)" strokeWidth="2" className="opacity-30" />
             <line x1="760" y1="750" x2="1160" y2="750" stroke="url(#geom-grad)" strokeWidth="1.25" className="opacity-20" />
             <line x1="960" y1="550" x2="960" y2="950" stroke="url(#geom-grad)" strokeWidth="1.25" className="opacity-20" />
           </g>
 
           {/* Rotating Geometric Diamond & Square Grid on the Right (Behind the quote) */}
-          <g className="animate-spin-slow origin-astrolabe-right opacity-85" filter="url(#glow)">
+          <g className="animate-spin-slow origin-astrolabe-right opacity-85 svg-glow">
             {/* Outer Diamond */}
             <polygon points="1440,240 1740,540 1440,840 1140,540" fill="none" stroke="url(#geom-grad)" strokeWidth="3" />
             
@@ -97,7 +97,7 @@ export function Hero() {
           </g>
 
           {/* Rotating Reverse Diamond Assembly on the Left */}
-          <g className="animate-spin-reverse-slow origin-astrolabe-left opacity-75" filter="url(#glow)">
+          <g className="animate-spin-reverse-slow origin-astrolabe-left opacity-75 svg-glow">
             <polygon points="288,610 488,810 288,1010 88,810" fill="none" stroke="url(#geom-grad)" strokeWidth="2.5" />
             <rect x="158" y="680" width="260" height="260" fill="none" stroke="url(#geom-grad)" strokeWidth="2" strokeDasharray="8 8" />
             <polygon points="288,710 388,810 288,910 188,810" fill="none" stroke="url(#geom-grad)" strokeWidth="1.5" />
@@ -114,30 +114,30 @@ export function Hero() {
           {/* High-Tech Glowing Intersection Nodes (No Circle Outlines) */}
           <g className="animate-node-glow">
             <circle cx="528" cy="418" r="40" fill="url(#node-glow)" className="opacity-80" />
-            <line x1="520" y1="418" x2="536" y2="418" stroke="#f3e5ab" strokeWidth="2" filter="url(#glow)" />
-            <line x1="528" y1="410" x2="528" y2="426" stroke="#f3e5ab" strokeWidth="2" filter="url(#glow)" />
-            <polygon points="528,413 533,418 528,423 523,418" fill="#f3e5ab" filter="url(#glow)" />
+            <line x1="520" y1="418" x2="536" y2="418" stroke="#f3e5ab" strokeWidth="2" className="svg-glow" />
+            <line x1="528" y1="410" x2="528" y2="426" stroke="#f3e5ab" strokeWidth="2" className="svg-glow" />
+            <polygon points="528,413 533,418 528,423 523,418" fill="#f3e5ab" className="svg-glow" />
           </g>
           
           <g className="animate-node-glow" style={{ animationDelay: '1.5s' }}>
             <circle cx="1315" cy="540" r="50" fill="url(#node-glow)" className="opacity-90" />
-            <line x1="1305" y1="540" x2="1325" y2="540" stroke="#f3e5ab" strokeWidth="2" filter="url(#glow)" />
-            <line x1="1315" y1="530" x2="1315" y2="550" stroke="#f3e5ab" strokeWidth="2" filter="url(#glow)" />
-            <polygon points="1315,535 1320,540 1315,545 1310,540" fill="#f3e5ab" filter="url(#glow)" />
+            <line x1="1305" y1="540" x2="1325" y2="540" stroke="#f3e5ab" strokeWidth="2" className="svg-glow" />
+            <line x1="1315" y1="530" x2="1315" y2="550" stroke="#f3e5ab" strokeWidth="2" className="svg-glow" />
+            <polygon points="1315,535 1320,540 1315,545 1310,540" fill="#f3e5ab" className="svg-glow" />
           </g>
           
           <g className="animate-node-glow" style={{ animationDelay: '2.5s' }}>
             <circle cx="960" cy="864" r="30" fill="url(#node-glow)" className="opacity-75" />
-            <line x1="952" y1="864" x2="968" y2="864" stroke="#f3e5ab" strokeWidth="2" filter="url(#glow)" />
-            <line x1="960" y1="856" x2="960" y2="872" stroke="#f3e5ab" strokeWidth="2" filter="url(#glow)" />
-            <polygon points="960,860 964,864 960,868 956,864" fill="#f3e5ab" filter="url(#glow)" />
+            <line x1="952" y1="864" x2="968" y2="864" stroke="#f3e5ab" strokeWidth="2" className="svg-glow" />
+            <line x1="960" y1="856" x2="960" y2="872" stroke="#f3e5ab" strokeWidth="2" className="svg-glow" />
+            <polygon points="960,860 964,864 960,868 956,864" fill="#f3e5ab" className="svg-glow" />
           </g>
           
           <g className="animate-node-glow" style={{ animationDelay: '0.8s' }}>
             <circle cx="1632" cy="270" r="40" fill="url(#node-glow)" className="opacity-80" />
-            <line x1="1624" y1="270" x2="1640" y2="270" stroke="#f3e5ab" strokeWidth="2" filter="url(#glow)" />
-            <line x1="1632" y1="262" x2="1632" y2="278" stroke="#f3e5ab" strokeWidth="2" filter="url(#glow)" />
-            <polygon points="1632,265 1637,270 1632,275 1627,270" fill="#f3e5ab" filter="url(#glow)" />
+            <line x1="1624" y1="270" x2="1640" y2="270" stroke="#f3e5ab" strokeWidth="2" className="svg-glow" />
+            <line x1="1632" y1="262" x2="1632" y2="278" stroke="#f3e5ab" strokeWidth="2" className="svg-glow" />
+            <polygon points="1632,265 1637,270 1632,275 1627,270" fill="#f3e5ab" className="svg-glow" />
           </g>
         </svg>
       </div>

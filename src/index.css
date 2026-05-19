@@ -147,4 +147,27 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate3d(0, 0, 0);
 }
 
+/* Custom class for standard responsive SVG filters */
+.svg-glow {
+  filter: url(#glow);
+}
+
+/* 📱 Mobile Performance Overrides (max-width: 767px) */
+@media (max-width: 767px) {
+  /* Bypass heavy filter rendering on mobile devices (greatly speeds up Safari/iPhone rendering) */
+  .svg-glow {
+    filter: none !important;
+  }
+  
+  /* Disable expensive continuous animations on mobile to prevent paint & composite thrashing */
+  .animate-spin-slow,
+  .animate-spin-reverse-slow,
+  .animate-pulse-slow,
+  .animate-node-glow {
+    animation: none !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+}
+
 
