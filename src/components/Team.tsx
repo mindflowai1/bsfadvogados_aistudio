@@ -5,13 +5,13 @@ const team = [
     name: "Dr. Daniel Borges",
     role: "Sócio Fundador",
     description: "Com mais de uma década de experiência jurídica, lidera nossa equipe com visão estratégica e foco em resultados concretos.",
-    image: "https://ptotpfdlgsohxmsrfczs.supabase.co/storage/v1/object/public/bucket/daniel%20borges.png"
+    image: "/imagens adv/daniel borges.png"
   },
   {
     name: "Aline Moreira",
     role: "Advogada Associada",
     description: "Especialista focada no atendimento humanizado e na compreensão profunda do cenário de cada cliente.",
-    image: "https://ptotpfdlgsohxmsrfczs.supabase.co/storage/v1/object/public/bucket/aline%20moreira.jpg"
+    image: "/imagens adv/aline moreira.jpg"
   },
   {
     name: "Gustavo Lima",
@@ -58,6 +58,8 @@ export function Team() {
                 <img
                   src={member.image}
                   alt={member.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
               </div>

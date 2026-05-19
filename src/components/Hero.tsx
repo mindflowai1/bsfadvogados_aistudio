@@ -15,12 +15,8 @@ export function Hero() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            {/* Animating gradient for the strokes */}
+            {/* Stable linear gradient to prevent frame invalidation */}
             <linearGradient id="geom-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <animate attributeName="x1" dur="15s" values="0%;100%;0%" repeatCount="indefinite" />
-              <animate attributeName="y1" dur="15s" values="0%;100%;0%" repeatCount="indefinite" />
-              <animate attributeName="x2" dur="15s" values="100%;0%;100%" repeatCount="indefinite" />
-              <animate attributeName="y2" dur="15s" values="100%;0%;100%" repeatCount="indefinite" />
               <stop offset="0%" stopColor="#c5a059" stopOpacity="0.3" />
               <stop offset="25%" stopColor="#a8854c" stopOpacity="0.7" />
               <stop offset="50%" stopColor="#f3e5ab" stopOpacity="1.0" />
@@ -33,13 +29,11 @@ export function Hero() {
               <stop offset="100%" stopColor="#c5a059" stopOpacity="0" />
             </radialGradient>
 
-            {/* Glowing neon halo filter */}
-            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur1" />
-              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur2" />
+            {/* Optimized high-performance GPU-friendly desfoque filter */}
+            <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur" />
               <feMerge>
-                <feMergeNode in="blur2" />
-                <feMergeNode in="blur1" />
+                <feMergeNode in="blur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
@@ -57,7 +51,7 @@ export function Hero() {
           <line x1="0" y1="150" x2="1920" y2="150" stroke="url(#geom-grad)" strokeWidth="1" className="opacity-15" />
           <line x1="0" y1="540" x2="1920" y2="540" stroke="url(#geom-grad)" strokeWidth="1.5" className="opacity-25" />
           <line x1="0" y1="810" x2="1920" y2="810" stroke="url(#geom-grad)" strokeWidth="1.5" className="opacity-25" />
-          <line x1="0" y1="920" x2="1920" y2="920" stroke="url(#geom-grad)" strokeWidth="1" className="opacity-15" />
+          <line x1="0" y1="920" x2="1920" y2="920" stroke="url(#geom-grad)" strokeWidth="1-5" className="opacity-15" />
 
           {/* Oblique architectural lines */}
           <line x1="-200" y1="200" x2="2120" y2="860" stroke="url(#geom-grad)" strokeWidth="2.5" className="opacity-45" filter="url(#glow)" />
@@ -72,14 +66,14 @@ export function Hero() {
             <line x1="400" y1="100" x2="400" y2="500" stroke="url(#geom-grad)" strokeWidth="1.5" className="opacity-20" />
           </g>
           
-          <g className="animate-pulse-slow" style={{ animationDelay: '1s' }} filter="url(#glow)">
+          <g className="animate-pulse-slow" style={{ animationDelay: '2s' }} filter="url(#glow)">
             <polygon points="960,550 1160,750 960,950 760,750" fill="none" stroke="url(#geom-grad)" strokeWidth="2" className="opacity-30" />
             <line x1="760" y1="750" x2="1160" y2="750" stroke="url(#geom-grad)" strokeWidth="1.25" className="opacity-20" />
             <line x1="960" y1="550" x2="960" y2="950" stroke="url(#geom-grad)" strokeWidth="1.25" className="opacity-20" />
           </g>
 
           {/* Rotating Geometric Diamond & Square Grid on the Right (Behind the quote) */}
-          <g className="animate-spin-slow origin-astrolabe-right opacity-80" filter="url(#glow)">
+          <g className="animate-spin-slow origin-astrolabe-right opacity-85" filter="url(#glow)">
             {/* Outer Diamond */}
             <polygon points="1440,240 1740,540 1440,840 1140,540" fill="none" stroke="url(#geom-grad)" strokeWidth="3" />
             
@@ -103,7 +97,7 @@ export function Hero() {
           </g>
 
           {/* Rotating Reverse Diamond Assembly on the Left */}
-          <g className="animate-spin-reverse-slow origin-astrolabe-left opacity-70" filter="url(#glow)">
+          <g className="animate-spin-reverse-slow origin-astrolabe-left opacity-75" filter="url(#glow)">
             <polygon points="288,610 488,810 288,1010 88,810" fill="none" stroke="url(#geom-grad)" strokeWidth="2.5" />
             <rect x="158" y="680" width="260" height="260" fill="none" stroke="url(#geom-grad)" strokeWidth="2" strokeDasharray="8 8" />
             <polygon points="288,710 388,810 288,910 188,810" fill="none" stroke="url(#geom-grad)" strokeWidth="1.5" />

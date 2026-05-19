@@ -50,10 +50,11 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-20 flex justify-between items-center bg-transparent">
         {/* LOGO */}
         <a href="#" className="flex items-center gap-4 group">
-          <div className="w-[82px] h-[82px] flex items-center justify-center text-brand-gold group-hover:scale-105 transition-transform duration-500 bg-transparent">
+          <div className="w-[98px] h-[98px] flex items-center justify-center text-brand-gold group-hover:scale-105 transition-transform duration-500 bg-transparent">
             <img 
-              src="https://ptotpfdlgsohxmsrfczs.supabase.co/storage/v1/object/public/bucket/ChatGPT%20Image%2019%20de%20mai.%20de%202026,%2009_36_50.png" 
+              src="/logo.png" 
               alt="BFS Logo" 
+              decoding="async"
               className="w-full h-full object-contain"
             />
           </div>
