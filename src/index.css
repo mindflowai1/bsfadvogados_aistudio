@@ -26,5 +26,84 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-prestige {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #050505 0%, #0c0d10 100%);
 }
+
+/* Subtle modern grid overlay */
+.bg-grid-pattern {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(197, 160, 89, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(197, 160, 89, 0.03) 1px, transparent 1px);
+}
+
+/* Sober floating glowing blob animations */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(40px, -60px) scale(1.15) rotate(120deg);
+  }
+  66% {
+    transform: translate(-30px, 30px) scale(0.9) rotate(240deg);
+  }
+}
+
+@keyframes float-slower {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50px, 50px) scale(1.1) rotate(-180deg);
+  }
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(25px, 25px) scale(1.05);
+  }
+}
+
+.animate-blob-slow {
+  animation: float-slow 25s infinite ease-in-out;
+}
+
+.animate-blob-slower {
+  animation: float-slower 30s infinite ease-in-out;
+}
+
+.animate-blob-fast {
+  animation: float-fast 18s infinite ease-in-out;
+}
+
+/* Astrolabe and Geometry Center Points */
+.origin-astrolabe-right {
+  transform-origin: 75% 50%;
+}
+
+.origin-astrolabe-left {
+  transform-origin: 15% 75%;
+}
+
+/* Pulsing and dash animation rules */
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.9;
+  }
+}
+
+.animate-node-glow {
+  animation: pulse-glow 4s infinite ease-in-out;
+  transform-origin: center;
+}
+
+
