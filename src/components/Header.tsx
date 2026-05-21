@@ -27,8 +27,9 @@ export function Header() {
 
   const navLinks = [
     { name: 'A Banca', href: '#diferenciais' },
-    { name: 'Método', href: '#modelo' },
+    { name: 'Sobre', href: '#sobre' },
     { name: 'Equipe', href: '#equipe' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Reconhecimento', href: '#clientes' },
     { name: 'Contato', href: '#contato' },
   ];

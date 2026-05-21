@@ -6,9 +6,10 @@
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Differentials } from './components/Differentials';
-import { Timeline } from './components/Timeline';
+import { About } from './components/About';
 import { Team } from './components/Team';
 import { Testimonials } from './components/Testimonials';
+import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
@@ -18,9 +19,10 @@ export default function App() {
       <Header />
       <Hero />
       <Differentials />
-      <Timeline />
+      <About />
       <Team />
       <Testimonials />
+      <FAQ />
       <Footer />
       <FloatingWhatsApp />
     </div>

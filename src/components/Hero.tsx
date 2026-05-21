@@ -142,7 +142,12 @@ export function Hero() {
         </svg>
       </div>
 
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <motion.div
+        initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
+        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative z-10 flex flex-col min-h-screen"
+      >
         <main className="flex-1 w-full max-w-7xl mx-auto px-8 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center py-16 pt-32 lg:pt-40">
           <div className="lg:col-span-7">
             <motion.div
@@ -158,95 +163,101 @@ export function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
             >
-              <p className="text-lg opacity-60 max-w-md leading-relaxed font-light mb-10 text-white">
-                Por trás de cada processo, existe uma história que merece ser respeitada. Unimos nossos +10 anos de experiência com um atendimento verdadeiramente humanizado para proteger o seu patrimônio.
+              <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-xl">
+                Soluções jurídicas preventivas e contenciosas nas áreas Trabalhista, Empresarial e Civil com agilidade, ética e dedicação artesanal.
               </p>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4"
             >
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-brand-gold hover:bg-brand-gold-light text-black text-xs uppercase tracking-widest font-bold transition-colors duration-300 w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-brand-gold hover:bg-brand-gold-light text-black font-bold uppercase text-xs tracking-widest transition-all duration-300 rounded-sm group shadow-[0_10px_20px_-10px_rgba(197,160,89,0.5)] hover:shadow-[0_15px_30px_-5px_rgba(197,160,89,0.6)]"
               >
-                <MessageCircle className="w-5 h-5" />
-                Fale com um Advogado
+                <MessageCircle className="w-4 h-4 shrink-0 transition-transform group-hover:scale-110" />
+                Agendar Consulta
               </a>
-              
-              <div className="flex flex-col gap-1 items-start sm:items-start text-white/90">
-                <div className="flex gap-1 text-brand-gold">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
-                <span className="text-[10px] tracking-widest uppercase opacity-60 mt-1">5 Estrelas no Google</span>
-              </div>
+              <a
+                href="#diferenciais"
+                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-white/20 hover:border-brand-gold hover:text-brand-gold text-white uppercase text-xs tracking-widest font-bold transition-all duration-300 rounded-sm"
+              >
+                Conhecer A Banca
+              </a>
             </motion.div>
           </div>
 
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="lg:col-span-5 h-[500px] lg:h-[550px] relative hidden lg:block"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            className="lg:col-span-5 relative w-full h-[500px] hidden lg:block"
           >
-            {/* Staggered Floating Validation Cards Composition */}
-            <div className="absolute inset-0 select-none">
+            <div className="absolute inset-0 flex items-center justify-center">
               
-              {/* Background Geometric Grid Accent (for the cards to float over) */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
-                <svg className="w-[85%] h-[85%] text-brand-gold/45" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Concentric diamond grid lines */}
-                  <rect x="50" y="50" width="300" height="300" stroke="currentColor" strokeWidth="1" strokeDasharray="5 5" className="transform rotate-45 origin-center" />
-                  <rect x="100" y="100" width="200" height="200" stroke="currentColor" strokeWidth="1.5" className="transform rotate-45 origin-center" />
-                  <circle cx="200" cy="200" r="100" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" />
-                  {/* Glowing core */}
-                  <circle cx="200" cy="200" r="10" fill="currentColor" className="animate-pulse" />
-                </svg>
+              {/* Central Astrolabe Core Frame with rotation */}
+              <div className="w-[450px] h-[450px] rounded-full border border-brand-gold/25 relative animate-spin-slow origin-center flex items-center justify-center">
+                <div className="w-[380px] h-[380px] rounded-full border border-brand-gold/15 flex items-center justify-center">
+                  <div className="w-[300px] h-[300px] rounded-full border border-brand-gold/10 relative flex items-center justify-center">
+                    {/* Concentric rings to symbolize focus */}
+                    <div className="w-[180px] h-[180px] rounded-full border border-brand-gold/5 flex items-center justify-center">
+                      <div className="w-[100px] h-[100px] rounded-full border border-brand-gold/5 opacity-50"></div>
+                    </div>
+                    {/* Concentric drafting cross lines */}
+                    <div className="absolute top-0 bottom-0 left-1/2 w-[1px] bg-brand-gold/15"></div>
+                    <div className="absolute left-0 right-0 top-1/2 h-[1px] bg-brand-gold/15"></div>
+                  </div>
+                </div>
               </div>
 
+              {/* Reverse rotating outer geometric ring */}
+              <div className="absolute w-[490px] h-[490px] rounded-full border-t border-b border-brand-gold/10 border-l-0 border-r-0 animate-spin-reverse-slow"></div>
+
+              {/* Sober glowing ambient nodes */}
+              <div className="absolute w-[600px] h-[600px] rounded-full bg-brand-gold/5 blur-[80px] animate-pulse-slow"></div>
+
+              {/* Metadados / Metrics Cards Floating dynamically inside the grid */}
               {/* Card 1: Experience */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
                 whileHover={{ scale: 1.05, borderColor: "rgba(197, 160, 89, 0.7)", boxShadow: "0 15px 35px -10px rgba(197,160,89,0.35)" }}
-                className="absolute top-[30px] left-[6%] w-[240px] bg-[#050505]/85 backdrop-blur-md border border-brand-gold/15 p-5 shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-pointer transition-all duration-300"
+                className="absolute top-[40px] left-[6%] w-[240px] bg-[#050505]/85 backdrop-blur-md border border-brand-gold/15 p-5 shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-pointer transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-2.5 bg-brand-gold/10 border border-brand-gold/20 text-brand-gold">
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-serif text-white font-semibold leading-none mb-1">+15 Anos</h4>
-                    <p className="text-[10px] uppercase tracking-widest text-brand-gold font-medium mb-1.5">Atuação Nacional</p>
-                    <p className="text-[11px] text-white/60 leading-relaxed font-light">Representando causas complexas em todo o país.</p>
+                    <h4 className="text-xl font-serif text-white font-semibold leading-none mb-1">+10 Anos</h4>
+                    <p className="text-[10px] uppercase tracking-widest text-brand-gold font-medium mb-1.5">De sólida atuação</p>
+                    <p className="text-[11px] text-white/60 leading-relaxed font-light">Liderança jurídica robusta construindo defesas e contratos eficientes.</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Card 2: Litigation Success */}
+              {/* Card 2: Strategic Focus */}
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut", delay: 0.4 }}
                 whileHover={{ scale: 1.05, borderColor: "rgba(197, 160, 89, 0.7)", boxShadow: "0 15px 35px -10px rgba(197,160,89,0.35)" }}
-                className="absolute top-[140px] right-[2%] w-[240px] bg-[#050505]/85 backdrop-blur-md border border-brand-gold/15 p-5 shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-pointer transition-all duration-300"
+                className="absolute top-[210px] right-[2%] w-[240px] bg-[#050505]/85 backdrop-blur-md border border-brand-gold/15 p-5 shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-pointer transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-2.5 bg-brand-gold/10 border border-brand-gold/20 text-brand-gold">
                     <TrendingUp className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-serif text-white font-semibold leading-none mb-1">98.4%</h4>
-                    <p className="text-[10px] uppercase tracking-widest text-brand-gold font-medium mb-1.5">Taxa de Êxito</p>
-                    <p className="text-[11px] text-white/60 leading-relaxed font-light">Resultados expressivos em teses jurídicas e acordos.</p>
+                    <h4 className="text-xl font-serif text-white font-semibold leading-none mb-1">Prevenção</h4>
+                    <p className="text-[10px] uppercase tracking-widest text-brand-gold font-medium mb-1.5">Foco em Resultados</p>
+                    <p className="text-[11px] text-white/60 leading-relaxed font-light">Assessoria direcionada para redução drástica de riscos legais.</p>
                   </div>
                 </div>
               </motion.div>
@@ -256,7 +267,7 @@ export function Hero() {
                 animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 0.2 }}
                 whileHover={{ scale: 1.05, borderColor: "rgba(197, 160, 89, 0.7)", boxShadow: "0 15px 35px -10px rgba(197,160,89,0.35)" }}
-                className="absolute bottom-[150px] left-[2%] w-[240px] bg-[#050505]/85 backdrop-blur-md border border-brand-gold/15 p-5 shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-pointer transition-all duration-300"
+                className="absolute bottom-[50px] left-[2%] w-[240px] bg-[#050505]/85 backdrop-blur-md border border-brand-gold/15 p-5 shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-pointer transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-2.5 bg-brand-gold/10 border border-brand-gold/20 text-brand-gold">
@@ -270,29 +281,10 @@ export function Hero() {
                 </div>
               </motion.div>
 
-              {/* Card 4: Integrity & Trust */}
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ repeat: Infinity, duration: 5.8, ease: "easeInOut", delay: 0.6 }}
-                whileHover={{ scale: 1.05, borderColor: "rgba(197, 160, 89, 0.7)", boxShadow: "0 15px 35px -10px rgba(197,160,89,0.35)" }}
-                className="absolute bottom-[30px] right-[6%] w-[240px] bg-[#050505]/85 backdrop-blur-md border border-brand-gold/15 p-5 shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-pointer transition-all duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 bg-brand-gold/10 border border-brand-gold/20 text-brand-gold">
-                    <ShieldCheck className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-serif text-white font-semibold leading-none mb-1">100%</h4>
-                    <p className="text-[10px] uppercase tracking-widest text-brand-gold font-medium mb-1.5">Segurança Jurídica</p>
-                    <p className="text-[11px] text-white/60 leading-relaxed font-light">Conformidade e governança de altíssimo padrão.</p>
-                  </div>
-                </div>
-              </motion.div>
-
             </div>
           </motion.div>
         </main>
-      </div>
+      </motion.div>
     </section>
   );
 }
