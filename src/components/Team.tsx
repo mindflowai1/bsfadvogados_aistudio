@@ -9,13 +9,13 @@ const team = [
   },
   {
     name: "Aline Moreira",
-    role: "Advogada Associada",
+    role: "Assessora Jurídica",
     description: "Especialista focada no atendimento humanizado e na compreensão profunda do cenário de cada cliente.",
     image: "/imagens adv/aline moreira.jpg"
   },
   {
     name: "Gustavo Lima",
-    role: "Advogado Associado",
+    role: "Assessor Jurídico",
     description: "Atuação técnica exemplar com análise meticulosa, focada em construir a melhor defesa e estratégia.",
     image: "/imagens adv/gustavo lima.jpeg"
   }
