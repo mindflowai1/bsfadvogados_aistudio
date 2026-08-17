@@ -5,13 +5,13 @@ const team = [
     name: "Dr. Daniel Borges",
     role: "Sócio Fundador",
     description: "Com mais de uma década de experiência jurídica, lidera nossa equipe com visão estratégica e foco em resultados concretos.",
-    image: "/imagens adv/daniel borges.jpeg"
+    image: "/imagens adv/daniel borges.JPEG"
   },
   {
     name: "Aline Moreira",
     role: "Assessora Jurídica",
     description: "Especialista focada no atendimento humanizado e na compreensão profunda do cenário de cada cliente.",
-    image: "/imagens adv/aline moreira.jpg"
+    image: "/imagens adv/aline moreira.JPEG"
   },
   {
     name: "Gustavo Lima",
