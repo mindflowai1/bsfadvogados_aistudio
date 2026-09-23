@@ -4,18 +4,18 @@ import { Star, Quote } from 'lucide-react';
 const testimonials = [
   {
     name: "Maria L.",
-    category: "Direito Civil",
-    text: "Passei por uma situação muito difícil quando tentaram tomar o imóvel da minha mãe, e achei que não conseguiríamos resolver. O escritório nos acompanhou em cada etapa com muita atenção e clareza, sempre explicando tudo de forma simples. Conseguimos a reintegração da posse e hoje estamos tranquilos novamente. Sou muito grata pelo cuidado e pela dedicação que tiveram com nossa causa."
+    category: "Rescisão e Verbas",
+    text: "Fui demitida depois de anos de empresa e recebi minha rescisão calculada errada. O escritório revisou tudo, identificou os valores que faltavam e conseguiu o pagamento correto rapidamente. Me explicaram cada etapa com muita clareza, sem juridiquês. Hoje estou tranquila e recomendo de olhos fechados."
   },
   {
     name: "Paulo S.",
-    category: "Direito Empresarial",
-    text: "Desde o início da empresa, o escritório sempre esteve ao nosso lado. Contratos, reuniões, orientações e qualquer problema jurídico que aparece, somos atendidos com rapidez e muita responsabilidade. O que mais gosto é a forma humana com que tratam a gente, sempre disponíveis e prontos para ajudar. Hoje temos muito mais segurança para tocar o nosso negócio."
+    category: "Consultoria Trabalhista Empresarial",
+    text: "Desde o início da empresa, o escritório nos orienta em todas as questões trabalhistas: contratos, jornada, banco de horas e prevenção de passivos. Somos atendidos com rapidez e responsabilidade sempre que surge uma dúvida. Hoje temos muito mais segurança jurídica para tocar o negócio."
   },
   {
     name: "Sandra C.",
     category: "Direito Trabalhista",
-    text: "Procurei o escritório depois de passar por muitos problemas trabalhando em um hotel, sem receber meus direitos corretamente. Fui muito bem atendida desde a primeira conversa. Conseguimos o reconhecimento da insalubridade e todos os direitos da rescisão como deveriam ser pagos. Recomendo de olhos fechados, não só para causas trabalhistas, mas para qualquer situação jurídica em que a pessoa precise de um atendimento sério e humano."
+    text: "Procurei o escritório depois de passar por muitos problemas trabalhando em um hotel, sem receber meus direitos corretamente. Fui muito bem atendida desde a primeira conversa. Conseguimos o reconhecimento da insalubridade e todos os direitos da rescisão como deveriam ser pagos. Recomendo de olhos fechados para qualquer trabalhador que precise de um atendimento sério e humano."
   }
 ];
 

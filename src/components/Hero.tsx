@@ -1,10 +1,14 @@
 import { motion } from 'motion/react';
-import { MessageCircle, Star, Award, TrendingUp, Users, ShieldCheck } from 'lucide-react';
+import { MessageCircle, Star, Award, TrendingUp, Users, ShieldCheck, UserRound, Building2, ArrowRight } from 'lucide-react';
 
 export function Hero() {
   const whatsappNumber = "5531985911342";
   const whatsappMessage = encodeURIComponent("Olá, visitei o site da BFS Advogados e gostaria de agendar uma consulta.");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  const goToAudience = (audience: 'trabalhador' | 'empresa') => () => {
+    window.dispatchEvent(new CustomEvent('bfs:set-audience', { detail: audience }));
+  };
 
   return (
     <section className="min-h-screen flex flex-col bg-brand-navy relative overflow-hidden">
@@ -166,7 +170,7 @@ export function Hero() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
             >
               <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-xl">
-                Assessoria trabalhista completa para trabalhadores e empresas — da rescisão ao contencioso — com atuação complementar em Direito Empresarial e Civil.
+                Assessoria trabalhista completa para trabalhadores e empresas — da consultoria preventiva ao contencioso — com agilidade, ética e dedicação artesanal.
               </p>
             </motion.div>
 
@@ -190,6 +194,33 @@ export function Hero() {
                 className="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-white/20 hover:border-brand-gold hover:text-brand-gold text-white uppercase text-xs tracking-widest font-bold transition-all duration-300 rounded-sm"
               >
                 Conhecer A Banca
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-3 mt-5"
+            >
+              <a
+                href="#areas-atuacao"
+                onClick={goToAudience('trabalhador')}
+                className="inline-flex items-center gap-2.5 text-white/70 hover:text-brand-gold text-xs uppercase tracking-widest font-medium transition-colors duration-300 group"
+              >
+                <UserRound className="w-3.5 h-3.5 shrink-0 text-brand-gold" />
+                Assessoria para Trabalhadores
+                <ArrowRight className="w-3.5 h-3.5 shrink-0 -translate-x-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+              </a>
+              <span className="hidden sm:block w-px h-4 bg-white/15 self-center"></span>
+              <a
+                href="#areas-atuacao"
+                onClick={goToAudience('empresa')}
+                className="inline-flex items-center gap-2.5 text-white/70 hover:text-brand-gold text-xs uppercase tracking-widest font-medium transition-colors duration-300 group"
+              >
+                <Building2 className="w-3.5 h-3.5 shrink-0 text-brand-gold" />
+                Assessoria para Empresários
+                <ArrowRight className="w-3.5 h-3.5 shrink-0 -translate-x-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
               </a>
             </motion.div>
           </div>

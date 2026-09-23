@@ -44,16 +44,11 @@ export function About() {
               <ul className="space-y-4 pt-4">
                 <li className="flex items-center gap-3 text-xs tracking-wider uppercase text-white font-semibold">
                   <span className="w-1.5 h-1.5 bg-brand-gold rounded-full shrink-0"></span>
-                  Direito Trabalhista
-                  <span className="text-[9px] text-brand-gold/80 normal-case tracking-normal font-medium">— especialidade</span>
+                  Direito do Trabalho — Trabalhador
                 </li>
-                <li className="flex items-center gap-3 text-xs tracking-wider uppercase text-white/70 font-medium">
-                  <span className="w-1.5 h-1.5 bg-brand-gold/50 rounded-full shrink-0"></span>
-                  Direito Empresarial
-                </li>
-                <li className="flex items-center gap-3 text-xs tracking-wider uppercase text-white/70 font-medium">
-                  <span className="w-1.5 h-1.5 bg-brand-gold/50 rounded-full shrink-0"></span>
-                  Direito Civil
+                <li className="flex items-center gap-3 text-xs tracking-wider uppercase text-white font-semibold">
+                  <span className="w-1.5 h-1.5 bg-brand-gold rounded-full shrink-0"></span>
+                  Direito do Trabalho — Empresa
                 </li>
               </ul>
             </div>
@@ -69,7 +64,7 @@ export function About() {
           {/* Right Column: The Biography Content */}
           <div className="lg:col-span-7 space-y-6 text-white/80 font-light leading-relaxed text-base md:text-lg">
             <p>
-              A <strong className="text-white font-medium">BFS Advogados</strong> é um escritório de advocacia localizado estrategicamente em <strong className="text-white font-medium">Belo Horizonte</strong>, no tradicional bairro Funcionários, e em <strong className="text-white font-medium">Vespasiano</strong>, com <span className="text-brand-gold font-medium italic">especialização em Direito do Trabalho</span> — atuando tanto na defesa de trabalhadores quanto na assessoria preventiva e contenciosa de empresas — e atuação complementar nas áreas Empresarial e Civil.
+              A <strong className="text-white font-medium">BFS Advogados</strong> é um escritório de advocacia localizado estrategicamente em <strong className="text-white font-medium">Belo Horizonte</strong>, no tradicional bairro Funcionários, e em <strong className="text-white font-medium">Vespasiano</strong>, com <span className="text-brand-gold font-medium italic">especialização exclusiva em Direito do Trabalho</span> — atuando tanto na defesa de trabalhadores quanto na assessoria preventiva e contenciosa de empresas.
             </p>
             
             <p>

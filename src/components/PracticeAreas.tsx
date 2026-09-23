@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   ChevronDown,
@@ -301,6 +301,18 @@ export function PracticeAreas() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const categories = audience === 'trabalhador' ? workerCategories : companyCategories;
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<Audience>).detail;
+      if (detail === 'trabalhador' || detail === 'empresa') {
+        setAudience(detail);
+        setOpenIndex(0);
+      }
+    };
+    window.addEventListener('bfs:set-audience', handler);
+    return () => window.removeEventListener('bfs:set-audience', handler);
+  }, []);
 
   const handleAudienceChange = (value: Audience) => {
     setAudience(value);
