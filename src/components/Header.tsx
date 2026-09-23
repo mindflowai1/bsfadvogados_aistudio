@@ -29,6 +29,7 @@ export function Header() {
     { name: 'A Banca', href: '#diferenciais' },
     { name: 'Sobre', href: '#sobre' },
     { name: 'Equipe', href: '#equipe' },
+    { name: 'Áreas de Atuação', href: '#areas-atuacao' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Reconhecimento', href: '#clientes' },
     { name: 'Contato', href: '#contato' },

@@ -8,6 +8,7 @@ import { Hero } from './components/Hero';
 import { Differentials } from './components/Differentials';
 import { About } from './components/About';
 import { Team } from './components/Team';
+import { PracticeAreas } from './components/PracticeAreas';
 import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
@@ -21,6 +22,7 @@ export default function App() {
       <Differentials />
       <About />
       <Team />
+      <PracticeAreas />
       <Testimonials />
       <FAQ />
       <Footer />

@@ -156,7 +156,7 @@ export function Hero() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 text-white">
-                Assessoria Jurídica<br/>de <span className="italic text-brand-gold">Excelência.</span>
+                Direito do Trabalho<br/>com <span className="italic text-brand-gold">Excelência.</span>
               </h1>
             </motion.div>
 
@@ -166,7 +166,7 @@ export function Hero() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
             >
               <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-xl">
-                Soluções jurídicas preventivas e contenciosas nas áreas Trabalhista, Empresarial e Civil com agilidade, ética e dedicação artesanal.
+                Assessoria trabalhista completa para trabalhadores e empresas — da rescisão ao contencioso — com atuação complementar em Direito Empresarial e Civil.
               </p>
             </motion.div>
 
