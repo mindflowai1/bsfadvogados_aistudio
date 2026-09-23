@@ -190,10 +190,10 @@ export function Hero() {
                 Agendar Consulta
               </a>
               <a
-                href="#diferenciais"
+                href="#areas-atuacao"
                 className="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-white/20 hover:border-brand-gold hover:text-brand-gold text-white uppercase text-xs tracking-widest font-bold transition-all duration-300 rounded-sm"
               >
-                Conhecer A Banca
+                Ver Áreas de Atuação
               </a>
             </motion.div>
 
